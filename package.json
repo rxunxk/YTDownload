@@ -1,0 +1,21 @@
+{
+  "name": "YTDownload",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.6"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-ytdownload": "cds watch --open ytdownload/webapp/index.html?sap-ui-xx-viewCache=false"
+  }
+}

@@ -1,0 +1,70 @@
+<mvc:View
+    controllerName="com.raunak.ytdownload.controller.mainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <FlexBox class="parentFlex">
+                <Text
+                    text="Welcome to Youtube Downloader"
+                    class="welcomeTxt"
+                />
+                <FlexBox class="searchFlex">
+                    <Input
+                        id="inputText"
+                        placeholder="Paste URL"
+                        class="searchInput"
+                        width="100%"
+                    />
+                    <Button
+                        icon="sap-icon://search"
+                        type="Emphasized"
+                        press="onSearchClick"
+                    />
+                </FlexBox>
+                <FlexBox class="detailsFlex">
+                    <FlexBox direction="Column">
+                        <FlexBox
+                            direction="Row"
+                            visible="{thumbnailModel>/visible}"
+                        >
+                            <Text
+                                text="Title: "
+                                class="titleTxt"
+                            />
+                            <Text
+                                text="{thumbnailModel>/videoTitle}"
+                                class="title"
+                            />
+                        </FlexBox>
+                        <FlexBox
+                            direction="Row"
+                            visible="{thumbnailModel>/visible}"
+                        >
+                            <Text
+                                text="Length: "
+                                class="titleTxt"
+                            />
+                            <Text
+                                text="{thumbnailModel>/videoLength}"
+                                class="length"
+                            />
+                        </FlexBox>
+                    </FlexBox>
+                    <Image
+                        width="100%"
+                        class="thumbnail"
+                        src="{thumbnailModel>/imgSource}"
+                        visible="{thumbnailModel>/visible}"
+                    />
+                </FlexBox>
+                <FlexBox />
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>

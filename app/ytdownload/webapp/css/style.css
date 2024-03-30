@@ -1,0 +1,47 @@
+.parentFlex {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.searchFlex {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin: 8px;
+    width: 700px;
+    max-width: 100%;
+}
+
+.searchFlex>*:nth-child(1) {
+    width: 100%;
+}
+
+.welcomeTxt {
+    font-size: 2rem;
+}
+
+.detailsFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0.5rem;
+    width: 700px;
+    max-width: 100%;
+}
+
+.thumbnail {
+    border-radius: 0.5rem;
+}
+
+.titleTxt {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.title,
+.length {
+    font-size: 1rem;
+}
