@@ -10,7 +10,7 @@ sap.ui.define([
     function (Controller, BusyIndicator, MessageBox, JSONModel) {
         "use strict";
 
-        const BASE_URL = '/odata/v4/ytdownload/'
+        const VID_INFO_URL = '/odata/v4/ytdownload/getVideoInfo'
 
         return Controller.extend("com.raunak.ytdownload.controller.mainView", {
             onInit: function () {
@@ -74,7 +74,7 @@ sap.ui.define([
                 let controller = this;
 
                 $.ajax({
-                    url: BASE_URL + "download",
+                    url: VID_INFO_URL,
                     method: "POST",
                     data: JSON.stringify({
                         url: srchInputValue,

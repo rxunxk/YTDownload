@@ -28,31 +28,45 @@
                     />
                 </FlexBox>
                 <FlexBox class="detailsFlex">
-                    <FlexBox direction="Column">
-                        <FlexBox
-                            direction="Row"
-                            visible="{thumbnailModel>/visible}"
-                        >
-                            <Text
-                                text="Title: "
-                                class="titleTxt"
-                            />
-                            <Text
-                                text="{thumbnailModel>/videoTitle}"
-                                class="title"
-                            />
+                    <FlexBox
+                        direction="Row"
+                        justifyContent="SpaceBetween"
+                    >
+                        <FlexBox direction="Column">
+                            <FlexBox
+                                direction="Row"
+                                visible="{thumbnailModel>/visible}"
+                            >
+                                <Text
+                                    text="Title: "
+                                    class="titleTxt titletwo"
+                                />
+                                <Text
+                                    text="{thumbnailModel>/videoTitle}"
+                                    class="title"
+                                />
+                            </FlexBox>
+                            <FlexBox
+                                direction="Row"
+                                visible="{thumbnailModel>/visible}"
+                            >
+                                <Text
+                                    text="Length: "
+                                    class="titleTxt"
+                                />
+                                <Text
+                                    text="{thumbnailModel>/videoLength}"
+                                    class="length"
+                                />
+                            </FlexBox>
                         </FlexBox>
                         <FlexBox
                             direction="Row"
                             visible="{thumbnailModel>/visible}"
                         >
-                            <Text
-                                text="Length: "
-                                class="titleTxt"
-                            />
-                            <Text
-                                text="{thumbnailModel>/videoLength}"
-                                class="length"
+                            <Button
+                                text="Download"
+                                type="Success"
                             />
                         </FlexBox>
                     </FlexBox>

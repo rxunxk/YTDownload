@@ -6,6 +6,7 @@ type downloadResponse : {
 
 service YTDownload {
 
-    action download(url : String) returns downloadResponse;
+    action getVideoInfo(url : String)                returns downloadResponse;
+    action downloadVid(url : String, title : String) returns String;
 
 }
