@@ -42,6 +42,7 @@
                                     class="titleTxt titletwo"
                                 />
                                 <Text
+                                    id="vidTitleTxt"
                                     text="{thumbnailModel>/videoTitle}"
                                     class="title"
                                 />
@@ -67,6 +68,7 @@
                             <Button
                                 text="Download"
                                 type="Success"
+                                press="onDownloadClick"
                             />
                         </FlexBox>
                     </FlexBox>

@@ -10,7 +10,8 @@ sap.ui.define([
     function (Controller, BusyIndicator, MessageBox, JSONModel) {
         "use strict";
 
-        const VID_INFO_URL = '/odata/v4/ytdownload/getVideoInfo'
+        const VID_INFO_URL = '/odata/v4/ytdownload/getVideoInfo';
+        const DOWNLOAD_URL = '/odata/v4/ytdownload/downloadVid';
 
         return Controller.extend("com.raunak.ytdownload.controller.mainView", {
             onInit: function () {
@@ -116,6 +117,32 @@ sap.ui.define([
                     }
                 });
 
+            },
+            onDownloadClick(oEvent) {
+                BusyIndicator.show(0);
+
+                let url = this.getView().byId('inputText').getValue();
+                let title = this.getView().byId('vidTitleTxt').getText();
+
+                $.ajax({
+                    url: DOWNLOAD_URL,
+                    method: 'POST',
+                    data: JSON.stringify({
+                        url: url,
+                        title: title
+                    }),
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    success: (e) => {
+                        BusyIndicator.hide();
+                        console.log(e)
+                    },
+                    error: (e) => {
+                        BusyIndicator.hide();
+                        console.log(e)
+                    }
+                })
             }
         });
     });
